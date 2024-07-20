@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cronometro_jpg"
+    tools:context=".CronometroActivity">
+
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="110dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="116dp"
+        android:backgroundTint="#B3A7A7"
+        android:textColor="@color/black"
+        android:text="INICIAR"
+        app:layout_constraintEnd_toEndOf="@+id/btnDetener"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/btnDetener"
+        app:layout_constraintTop_toBottomOf="@+id/txvTime" />
+
+    <Button
+        android:id="@+id/btnDetener"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#B3A7A7"
+        android:textColor="@color/black"
+        android:text="DETENER"
+        app:layout_constraintBottom_toTopOf="@+id/btnReniciar"
+        app:layout_constraintEnd_toEndOf="@+id/btnReniciar"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/btnReniciar"
+        app:layout_constraintTop_toBottomOf="@+id/txvMiliSegundos" />
+
+    <Button
+        android:id="@+id/btnReniciar"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="183dp"
+        android:backgroundTint="#B3A7A7"
+        android:textColor="@color/black"
+        android:text="RENICIAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDetener" />
+
+    <TextView
+        android:id="@+id/txvTime"
+        android:layout_width="348dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="3dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="42dp"
+        android:fontFamily="@font/aldrich"
+        android:text="0h: 0m : 0s"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvMiliSegundos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvMiliSegundos"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="130dp"
+        android:fontFamily="@font/aldrich"
+        android:text="000"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDetener"
+        app:layout_constraintEnd_toEndOf="@+id/btnIniciar"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="@+id/btnIniciar"
+        app:layout_constraintTop_toBottomOf="@+id/txvTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoprincipal_jpg"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="213dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="34dp"
+        android:backgroundTint="#B3A7A7"
+        android:textColor="@color/black"
+        android:text="REGISTRARSE"
+        app:layout_constraintBottom_toTopOf="@+id/btnIngresoNoUsuario"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngresoNoUsuario"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresoNoUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
+
+    <Button
+        android:id="@+id/btnIngresoNoUsuario"
+        android:layout_width="213dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="91dp"
+        android:backgroundTint="#B3A7A7"
+        android:textColor="@color/black"
+        android:text="INICIAR SIN REGISTRO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarse" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="213dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="110dp"
+        android:backgroundTint="#B3A7A7"
+        android:textColor="@color/black"
+        android:text="INGRESAR"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarse"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegistrarse"
+        app:layout_constraintStart_toStartOf="@+id/btnRegistrarse"
+        app:layout_constraintTop_toBottomOf="@+id/edtxPassword" />
+
+    <EditText
+        android:id="@+id/edtxUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edtxPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edtxPassword"
+        app:layout_constraintStart_toStartOf="@+id/edtxPassword"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtxPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnIngresar"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngresar"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresar"
+        app:layout_constraintTop_toBottomOf="@+id/edtxUsuario" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtxUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/timer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

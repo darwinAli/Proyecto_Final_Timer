@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondologin_jpg"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/edtxNuevoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="231dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edtxNuevoEmail"
+        app:layout_constraintEnd_toEndOf="@+id/edtxNuevoEmail"
+        app:layout_constraintStart_toStartOf="@+id/edtxNuevoEmail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtxNuevoPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarNuevoUsuario"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegistrarNuevoUsuario"
+        app:layout_constraintStart_toStartOf="@+id/btnRegistrarNuevoUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/edtxNuevoEmail" />
+
+    <EditText
+        android:id="@+id/edtxNuevoEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edtxNuevoPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edtxNuevoPassword"
+        app:layout_constraintStart_toStartOf="@+id/edtxNuevoPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtxNuevoUsuario" />
+
+    <Button
+        android:id="@+id/btnRegistrarNuevoUsuario"
+        android:layout_width="202dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="211dp"
+        android:backgroundTint="#B3A7A7"
+        android:text="REGISTRAR"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxNuevoPassword" />
+
+    <TextView
+        android:id="@+id/txvTituloLogin"
+        android:layout_width="187dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="92dp"
+        android:fontFamily="@font/alata"
+        android:text="LOGIN"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtxNuevoUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

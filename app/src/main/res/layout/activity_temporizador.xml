@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cronometro_jpg"
+    tools:context=".TemporizadorActivity">
+
+    <TextView
+        android:id="@+id/txvTimeTemporizador"
+        android:layout_width="348dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="@font/aldrich"
+        android:text="0h: 0m : 0s"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnIniciarTemporizador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnIniciarTemporizador"
+        android:layout_width="111dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="#B3A7A7"
+        android:text="INICIAR"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnDetenerTemporizador"
+        app:layout_constraintEnd_toEndOf="@+id/txvTimeTemporizador"
+        app:layout_constraintStart_toStartOf="@+id/txvTimeTemporizador"
+        app:layout_constraintTop_toBottomOf="@+id/txvTimeTemporizador" />
+
+    <Button
+        android:id="@+id/btnDetenerTemporizador"
+        android:layout_width="111dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#B3A7A7"
+        android:text="DETENER"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnReniciarTemporizador"
+        app:layout_constraintEnd_toEndOf="@+id/btnIniciarTemporizador"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnIniciarTemporizador"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarTemporizador" />
+
+    <Button
+        android:id="@+id/btnReniciarTemporizador"
+        android:layout_width="111dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="169dp"
+        android:backgroundTint="#B3A7A7"
+        android:text="RENICIAR"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnDetenerTemporizador"
+        app:layout_constraintStart_toStartOf="@+id/btnDetenerTemporizador"
+        app:layout_constraintTop_toBottomOf="@+id/btnSetTime" />
+
+    <Button
+        android:id="@+id/btnSetTime"
+        android:layout_width="189dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginBottom="296dp"
+        android:backgroundTint="#B3A7A7"
+        android:text="INGRESAR TIEMPO"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnReniciarTemporizador"
+        app:layout_constraintEnd_toEndOf="@+id/txvTimeTemporizador"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="@+id/txvTimeTemporizador"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCambiarTime"
+        android:layout_width="189dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="#B3A7A7"
+        android:text="CAMBIAR TIEMPO"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReniciarTemporizador"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

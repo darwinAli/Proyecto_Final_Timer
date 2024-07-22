@@ -20,6 +20,9 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     Button btnCronometro;
     Button btnRelojMundial;
 
+    Button btnTemporizador;
+    Button btnAlarma;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         btnCronometro=findViewById(R.id.btnCronometro);
         btnRelojMundial=findViewById(R.id.btnRelojMundial);
+        btnTemporizador=findViewById(R.id.btnTemporizador);
+        btnAlarma=findViewById(R.id.btnAlarma);
 
         if(DataManager.getInstance().getCurrentUser()!=null){
             String name= DataManager.getInstance().getCurrentUser().getName();
@@ -58,6 +63,22 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent goRelojMundial=new Intent(MenuPrincipalActivity.this,RelojMundialActivity.class);
                 startActivity(goRelojMundial);
+            }
+        });
+
+        btnTemporizador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goTemporizador=new Intent(MenuPrincipalActivity.this,TemporizadorActivity.class);
+                startActivity(goTemporizador);
+            }
+        });
+
+        btnAlarma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goAlarma=new Intent(MenuPrincipalActivity.this,AlarmaActivity.class);
+                startActivity(goAlarma);
             }
         });
 

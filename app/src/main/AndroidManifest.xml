@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+
+
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,10 +17,16 @@
         android:theme="@style/Theme.TimerProject"
         tools:targetApi="31">
         <activity
-            android:name=".RelojMundialActivity"
+            android:name=".AlarmaActivity"
             android:exported="false" />
         <activity
-            android:name=".AlarmaActivity"
+            android:name=".TemporizadorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TemporizadorrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RelojMundialActivity"
             android:exported="false" />
         <activity
             android:name=".CronometroActivity"
@@ -36,6 +46,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".model.ReceptorAlarma" />
+
+
 
         <meta-data
             android:name="preloaded_fonts"
